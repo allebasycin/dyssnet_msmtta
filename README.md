@@ -3,7 +3,7 @@
 This repository provides the official codes of DySSNet with MSM-TTA and the UGIAD-Seg dataset. This repository is under active development. Inference code and examples coming soon!
 
 
-## 📦 Installation
+## Installation
 
 ### Quick Install
 
