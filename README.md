@@ -35,7 +35,6 @@ pip install mamba-ssm
 
 # Step 4: Install other requirements
 pip install -r requirements.txt
-
 ```
 
 ## Dataset Details
@@ -43,5 +42,17 @@ The UGIAD-Seg dataset provides open access to 3313 UGI endoscopic images from Ma
 The dataset can also be downloaded using the following links: <br />
 Google Drive: https://drive.google.com/file/d/1TioBa5SoGJF6noxPrqi0iKQkauhiIss6/view?usp=sharing <br />
 
+### Anatomical landmark annotation
+Our anatomical annotation approach is guided by previous photodocumentation guidelines such as the British and Japanese guidelines. The images are categorised into 9 landmarks. Anatomical landmarks identified in the antegrade view within the UGIAD dataset encompass the esophagus (E), squamocolumnar junction (SJ), gastric body in antegrade view (Ba), antrum (Ant), duodenal bulb (DB) and descending part of the duodenum (DD). Conversely, the retroflex view encompasses landmarks such as the fundus (F), gastric body in retroflex view (Br) and angulus (Ang).
+
+<p align="center">
+    <img src="/assets/anatomical_annotation.png" alt="Anatomical landmark annotation of the UGIAD Dataset" width="350">
+</p>
+
+### Disease annotation
+For disease annotation, the images in the dataset are classified into normal findings or 8 upper gastrointestinal (UGI) diseases including esophageal neoplasm, esophageal varices, gastroesophageal reflux disease (GERD), gastric neoplasm, gastric polyp, gastric ulcer, gastric varices, and duodenal ulcer.
+<p align="center">
+    <img src="/assets/UGIAD_Seg_disease.png" alt="Representative images of the disease types of UGIAD-Seg." width="1200">
+</p>
 
 
