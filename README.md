@@ -69,3 +69,11 @@ The following table displays the data distribution of the UGIAD dataset.
 | Duodenal bulb                    | 156    | 0                   | 0                  | 0    | 0                | 0             | 0             | 0               | 197            | 353   |
 | Descending part of duodenum      | 154    | 0                   | 0                  | 0    | 0                | 0             | 0             | 0               | 14             | 168   |
 | Total                            | 1014   | 256                 | 228                | 143  | 486              | 526           | 366           | 83              | 211            | 3313  |
+
+
+## Pretrained weights
+You can download the pretrained weights of the DySSNet checkpoint, which obtains the median IoU value, via the below link.
+| Model  | Params (M) | FLOPs (G) | IoU (%) | Link |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| DySSNet  | 23.28 | 4.23 | 89.53% | [Link](https://drive.google.com/file/d/1AM9v7idLHFB0eu2SHZOtsCjR49Oo8M8g/view?usp=sharing) |
+
