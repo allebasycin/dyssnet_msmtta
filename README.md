@@ -56,3 +56,16 @@ For disease annotation, the images in the dataset are classified into normal fin
 </p>
 
 
+The following table displays the data distribution of the UGIAD dataset.
+| Anatomical landmark / Disease    | Normal | Esophageal neoplasm | Esophageal varices | GERD | Gastric neoplasm | Gastric polyp | Gastric ulcer | Gastric varices | Duodenal ulcer | Total |
+|----------------------------------|--------|---------------------|--------------------|------|------------------|---------------|---------------|-----------------|----------------|-------|
+| Esophagus                        | 98     | 221                 | 133                | 24   | 0                | 0             | 0             | 0               | 0              | 476   |
+| Squamocolumnar junction          | 96     | 35                  | 95                 | 119  | 0                | 0             | 0             | 0               | 0              | 345   |
+| Fundus                           | 97     | 0                   | 0                  | 0    | 49               | 75            | 49            | 83              | 0              | 353   |
+| Gastric body (antegrade)         | 166    | 0                   | 0                  | 0    | 178              | 290           | 61            | 0               | 0              | 695   |
+| Gastric body (retroflex)         | 65     | 0                   | 0                  | 0    | 112              | 48            | 11            | 0               | 0              | 236   |
+| Angulus                          | 87     | 0                   | 0                  | 0    | 80               | 57            | 82            | 0               | 0              | 306   |
+| Antrum                           | 95     | 0                   | 0                  | 0    | 67               | 56            | 163           | 0               | 0              | 381   |
+| Duodenal bulb                    | 156    | 0                   | 0                  | 0    | 0                | 0             | 0             | 0               | 197            | 353   |
+| Descending part of duodenum      | 154    | 0                   | 0                  | 0    | 0                | 0             | 0             | 0               | 14             | 168   |
+| Total                            | 1014   | 256                 | 228                | 143  | 486              | 526           | 366           | 83              | 211            | 3313  |
