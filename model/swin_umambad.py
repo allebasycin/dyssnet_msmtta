@@ -4,8 +4,6 @@ import math
 import numpy as np
 from functools import partial
 from typing import Optional, Union, Type, List, Tuple, Callable, Dict
-# from gnn_based_attention_new import CrossAttentionWithGating
-# from model.gnn_based_attention_new import CrossAttentionWithGating
 
 import torch
 import torch.nn as nn
