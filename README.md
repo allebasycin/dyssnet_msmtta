@@ -1,4 +1,4 @@
-# Hybrid Network for Upper Gastrointestinal Disease Segmentation with Illumination–Boundary Adaptation and Uncertainty-Aware Post-Hoc Refinement
+# Hybrid Network for Upper Gastrointestinal Disease Segmentation with Illumination-Boundary Adaptation and Uncertainty-Aware Post-Hoc Refinement
 
 This repository provides the official codes of DySSNet with MSM-TTA and the UGIAD-Seg dataset. This repository is under active development. Inference code and examples coming soon!
 
@@ -72,8 +72,11 @@ The following table displays the data distribution of the UGIAD dataset.
 
 
 ## Pretrained weights
-You can download the pretrained weights of the DySSNet checkpoint, which obtains the median IoU value, via the below link.
+You can download the pretrained weights of the DySSNet checkpoint, which obtains the median IoU value for the UGIAD-Seg dataet, via the below link.
 | Model  | Params (M) | FLOPs (G) | IoU (%) | Link |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | DySSNet  | 23.28 | 4.23 | 89.53% | [Link](https://drive.google.com/file/d/1AM9v7idLHFB0eu2SHZOtsCjR49Oo8M8g/view?usp=sharing) |
 
+
+The ImageNet-1K pretrained weight that is used to train the DySSNet is also found in the pretrained weight folder of this repository or can be downloaded via this [Link](https://drive.google.com/file/d/118RJao5Qom0DJBB--vmXz-5rtPLO9j7K/view?usp=sharing).
+If you want a more updated version of the ImageNet-1K pretrained weight for the Swin-UMamba† encoder, please check the official repository of Swin-UMamba and see which one is compatible with the encoder of DySSNet.
