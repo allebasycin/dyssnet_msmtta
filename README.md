@@ -9,7 +9,7 @@ This repository provides the official codes of DySSNet with MSM-TTA and the UGIA
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/DySSNet.git
+git clone https://github.com/allebasycin/dyssnet_msmtta.git
 cd DySSNet
 
 # Create conda environment
