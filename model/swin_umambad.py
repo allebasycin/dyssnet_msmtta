@@ -785,9 +785,7 @@ class SwinUMambaD_text(nn.Module):
 def load_pretrained_ckpt(
         model,
         num_input_channels=1,
-        # ckpt_path = "./data/pretrained/vmamba/vmamba_tiny_e292.pth"
-        # ckpt_path="/home/allebasycin/Swin-UMamba/data/pretrained/vmamba/vmamba_tiny_e292.pth"
-        ckpt_path="/home/allebasycin/Swin-UMamba/data/pretrained/vmamba/vssmtiny_dp01_ckpt_epoch_292.pth"
+        ckpt_path = "./pretrained/vssmtiny_dp01_ckpt_epoch_292.pth"
 ):
     print(f"Loading weights from: {ckpt_path}")
     skip_params = ["norm.weight", "norm.bias", "head.weight", "head.bias"]
@@ -817,48 +815,10 @@ def load_pretrained_ckpt(
     return model
 
 
-def get_swin_umamba_d_text_from_plans(
-        num_classes: int,
-        num_input_channels: int,
-        deep_supervision: bool = True,
-        use_pretrain: bool = True,
-        device='cuda'
-):
-    vss_args = dict(
-        in_chans=num_input_channels,
-        patch_size=4,
-        depths=[2, 2, 9, 2],
-        dims=96,
-        drop_path_rate=0.2
-    )
-
-    decoder_args = dict(
-        num_classes=num_classes,
-        deep_supervision=deep_supervision,
-        features_per_stage=[96, 192, 384, 768],
-        drop_path_rate=0.2,
-        d_state=16,
-    )
-
-    model = SwinUMambaD_text(vss_args=vss_args, decoder_args=decoder_args, device=device)
-    model.apply(InitWeights_He(1e-2))
-    model.apply(init_last_bn_before_add_to_0)
-
-    if use_pretrain:
-        model = load_pretrained_ckpt(model, num_input_channels=num_input_channels)
-
-    return model
-
-
 if __name__ == "__main__":
-    # model = get_swin_umamba_d_text_from_plans(num_input_channels=3, num_classes=9, deep_supervision=False, use_pretrain=True).to('cuda')
     model = get_swin_umamba_d_from_plans(num_input_channels=3, num_classes=9, deep_supervision=False,
                                          use_pretrain=True).to('cuda')
-
-    anatomical_label = ["Fundus", "Esophagus", "Angulus", "Angulus"]
-    disease_label = ["Gastric ulcer", "GERD", "Gastric polyp", "Gastric neoplasm"]
     input = torch.randn((4, 3, 224, 224)).to('cuda')
-    # output = model(input, anatomical_label, disease_label)
     output = model(input)
     print(output.shape)
     from torchinfo import summary
